@@ -24,7 +24,7 @@ class ClientHomePage extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://18.206.140.135:3001/restaurantList')
+        axios.get('http://3.88.193.169:3001/restaurantList')
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -32,7 +32,7 @@ class ClientHomePage extends Component {
                 });
             });
 
-        axios.get('http://18.206.140.135:3001/nextOrderId')
+        axios.get('http://3.88.193.169:3001/nextOrderId')
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -40,7 +40,7 @@ class ClientHomePage extends Component {
                 });
             });
 
-        axios.get('http://18.206.140.135:3001/distinctCuisines')
+        axios.get('http://3.88.193.169:3001/distinctCuisines')
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -59,7 +59,7 @@ class ClientHomePage extends Component {
         //set the with credentials to true
         axios.defaults.withCredentials = true;
         // make a post request with the user data
-        axios.post('http://18.206.140.135:3001/searchItem', data)
+        axios.post('http://3.88.193.169:3001/searchItem', data)
             .then(response => {
                 console.log("Status Code : ", response.status);
                 if (response.status === 200) {
