@@ -22,7 +22,7 @@ var fs = require('fs');
 
 var pool = mysql.createPool({
     connectionLimit: 100,
-    //port: '3306',
+    port: '3306',
     host: 'samsbot1.cvrunnkd3clm.us-east-1.rds.amazonaws.com',
     user: 'ankitj03',
     password: 'ankitj03',
@@ -74,7 +74,7 @@ var storagePropFiles = multer.diskStorage({
 });
 
 // var rootDirectory = "public/images/";
-var rootDirectory = "/Users/tinaaggarwal/Documents/GitHub/CMPE273/Lab1-013735592/Grubhub/frontend/public/images/";
+var rootDirectory = "../frontend/public/images/";
 
 var uploadPropFiles = multer({
     storage: storagePropFiles
