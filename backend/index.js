@@ -20,7 +20,7 @@ var fs = require('fs');
 //     debug: false
 // })
 
-var pool = mysql.createPool({
+var pool = mysql.createConnection({
     connectionLimit: 100,
     port: '3306',
     host: 'samsbot1.cvrunnkd3clm.us-east-1.rds.amazonaws.com',
